@@ -1,4 +1,32 @@
 @b node {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: black;
+  background-color: wheat;
+  text-overflow: ellipsis;
+
+  @m root {
+    width: 228px;
+    height: 140px;
+  }
+
+  @m group {
+  }
+
+  @m subgroup {
+  }
+  @e title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #000000;
+  }
+
   @m root {
   }
 
@@ -6,6 +34,5 @@
   }
 
   @m subgroup {
-    
   }
 }

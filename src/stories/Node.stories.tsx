@@ -1,13 +1,30 @@
-/* eslint-disable */
-import { NodeLevel } from '../models/node-level';
-import NodeComponent from '../components/Node/Node';
+import { NodeLevel } from "../models/node-level";
+import NodeComponent from "../components/Node/Node";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 export default {
-  title: "Node",
+  title: "Example/Node",
+  component: NodeComponent,
+} as ComponentMeta<typeof NodeComponent>;
+
+const Template: ComponentStory<typeof NodeComponent> = (args) => (
+  <NodeComponent {...args} />
+);
+
+export const Root = Template.bind({});
+Root.args = {
+  title: "Заголовок",
+  level: NodeLevel.Root,
 };
 
-export const Default = () => <NodeComponent title='Заголовок' level={NodeLevel.Root}/>;
+export const Group = Template.bind({});
+Group.args = {
+  title: "Группа",
+  level: NodeLevel.Group,
+};
 
-Default.story = {
-  name: 'default',
+export const Subgroup = Template.bind({});
+Subgroup.args = {
+  title: "Подгруппа",
+  level: NodeLevel.Subgroup,
 };

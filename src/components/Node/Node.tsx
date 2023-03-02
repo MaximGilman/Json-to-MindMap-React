@@ -5,15 +5,15 @@ import { NodeLevel } from "../../models/node-level";
 
 const b = block("node");
 
-interface Props {
+interface IProps {
   title: string;
   level: NodeLevel;
 }
 
-const NodeComponent: FC<Props> = ({ title, level }) => {
+const NodeComponent: FC<IProps> = ({ title, level }) => {
   return (
     <div className={b({ level })}>
-      <span className={b("title")}>{title}</span>
+      <span className={b("title", { level })}>{title}</span>
     </div>
   );
 };
