@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { NodeLevel } from '../../models/node-level';
-import NodeComponent from './Node';
+import { NodeLevel } from '../models/node-level';
+import NodeComponent from '../components/Node/Node';
 
 export default {
   title: "Node",
